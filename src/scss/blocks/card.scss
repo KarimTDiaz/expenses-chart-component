@@ -1,0 +1,83 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/pseudo.scss' as*;
+
+.chart-component{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background-color: var(--very-pale-orange);
+    border-radius: 20px;
+    &::after{
+        @include pseudo (470px, 2px){
+            background-color: var(--cream);
+            top: 450px
+        }
+    }
+    &__bottom{
+        @include flexbox(flex,row,nowrap,space-between,end);
+        padding: 5rem 1.5rem 0;
+    }
+}
+.bars{
+    @include flexbox(flex,row,nowrap,space-evenly,center);
+    gap: 1.5rem;
+    &__item{
+        @include flexbox(flex,column,nowrap,space-between,center);
+        position: relative;
+        height: 300px;
+    }
+}
+
+.bar{
+    position: absolute;
+    bottom: 30px;
+    width: 50px;
+    background-color: var(--soft-red);
+    border-radius: 5px;
+    transform-origin: bottom;
+    animation-name: scale;
+    animation-duration: 2s;
+    &::after{
+        @include pseudo(110%, 35px){
+            content : attr(data-amount);
+            bottom: calc(100% + 8px);
+            left: -3.5%;
+            font-size: 1rem;
+            padding: 6px 3px;
+            background-color: var(--dark-brown);
+            color: #fffbf6;
+            border-radius: 5px;
+            transform: scale(0);
+            transition: transform 0.2s;
+        }
+    }
+    &:hover::after{
+      transform: scale(1);  
+    }
+}
+@keyframes scale {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(100%);
+    }
+}
+
+.amount-bar{
+    position: absolute;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    border: 2px solid var(--soft-red);
+    background-color: var(--cream);
+    &:hover {
+        background-color: red;
+    }
+}
+
+.day{
+    background-color: var(--cyan);
+}

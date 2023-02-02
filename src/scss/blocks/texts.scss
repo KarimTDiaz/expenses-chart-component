@@ -1,1 +1,34 @@
+.title{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--very-pale-orange);
+    &--spending{
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--dark-brown);
+    }
+}
+.text{
+    margin: 0;
+    color: var(--medium-brown);
+    &--day{
+        position: absolute;
+        bottom: -10px;
+    }
+    &--black{
+        font-weight: 800;
+        color: var(--dark-brown);
+    }
+}
 
+.money{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--very-pale-orange);
+    &--bigger{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--dark-brown);
+    }
+}

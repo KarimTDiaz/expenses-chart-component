@@ -1,4 +1,9 @@
-html {
-}
+
 body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    font-family: var(--primary-font);
+    background-color: var(--cream);
 }

@@ -5,13 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
   <body>
-    <header class="header"></header>
-    <main class="main"></main>
+    <header class="header">
+      <div class="header__info">
+        <h1 class="title">My balance</h1>
+        <span class="money">$921.48</span>
+      </div>
+      <div class="circle-decoration"></div>
+    </header>
+    <main class="main">
+      
+      <div class="chart-component">
+        <h2 class="title title--spending">Spending - Last 7 days</h2>
+        <div class="bars">
+          <div class="bars__item">
+            
+            <div class="bar bar--mon" data-amount=""></div>
+            <p class="text text--day">mon</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--tue" data-amount=""></div>
+            <p class="text text--day">tue</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--wed" data-amount=""></div>
+            <p class="text text--day">wed</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--thu" data-amount=""></div>
+            <p class="text text--day">thu</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--fri" data-amount=""></div>
+            <p class="text text--day">fri</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--sat" data-amount=""></div>
+            <p class="text text--day">sat</p>
+          </div>
+          <div class="bars__item">
+            
+            <div class="bar bar--sun" data-amount=""></div>
+            <p class="text text--day">sun</p>
+          </div>
+        </div>
+        <div class="chart-component__bottom">
+        <div class="total-month">
+          <p class="text">Total this month</p>
+          <p class="money money--bigger">$478.33</p>
+        </div>
+        <div class="last-month">
+          <p class="text text--black">+2.4%</p>
+          <p class="text">from last month</p>
+        </div>
+      </div>
+      </div>
+    </main>
     <footer class="footer"></footer>
     <script type="module" src="./js/index.js"></script>
   </body>

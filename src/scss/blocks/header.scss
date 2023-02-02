@@ -1,1 +1,39 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/pseudo.scss' as*;
 
+.header{
+    @include flexbox(flex,row,nowrap,space-between,center);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--soft-red);
+    border-radius: 20px;
+}
+.circle-decoration{
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-brown);
+    border-radius: 50%;
+    
+    
+
+    &::after{
+        @include pseudo(50px,50px){
+            border: 2px solid var(--very-pale-orange);
+            border-radius: 50%;
+            animation-name: circle;
+            animation-duration: 2s;
+            transform: translateX(-50%);
+        }
+    }
+}
+@keyframes circle {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
